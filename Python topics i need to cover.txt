@@ -1,0 +1,136 @@
+Data Types
+Type Hints
+Shortcut (Format)
+Integers
+Floats
+Operators (Part 1)
+Operators (Part 2)
+Operators (Part 3)
+Strings
+Type Conversion
+Simple Adder (Project)
+Booleans
+Lists
+Tuples
+Sets
+Frozensets
+Dictionaries
+None
+Data Types (Quiz)
+10 questions
+Mad Libs (Project)
+If...Elif...Else
+If...Else (Shorthand)
+For Loop
+While Loop
+Break & Continue
+Loop...Else
+Control & Flow Quiz
+4 questions
+Rock, Paper, Scissors (Project)
+Creating A Function
+Pass
+Parameters & Arguments
+Return Functions
+Recursion
+*Args & **Kwargs
+* & /
+Functions Quiz
+4 questions
+Chat Bot (Project)
+User Input
+Shortcut (Rename)
+Try...Except
+Else...Finally
+Raise
+Unknown Errors
+Errors Quiz
+5 questions
+Letters Only (Project)
+Modules
+Importing *
+if __name__ == "__main__"
+Packages
+Libraries
+Website Status (Project)
+Truthy & Falsy
+Comparing Floats
+Scopes
+Global
+Nonlocal
+List Comprehensions
+Slicing
+Don't Loop & Modify
+Grocery List (Project)
+OOP
+Classes & Objects
+__init__()
+self
+Attributes (Class & Instance)
+Dunder Methods
+__str__() & __repr__()
+__eq__()
+Methods VS Functions
+OOP Quiz
+6 questions
+Chat Bot (Project)
+Inheritance
+super()
+@staticmethod
+@classmethod
+@abstractmethod
+Name Mangling
+print()
+enumerate()
+round()
+range()
+slice()
+globals()
+locals()
+all()
+any()
+isinstance()
+Improved Chat Bot (Project)
+callable()
+filter()
+map()
+sorted()
+eval()
+exec()
+zip()
+Doc Strings
+F-Strings
+Assertions
+Unpacking
+== VS Is
+@dataclass
+Fields
+__post_init__
+InitVar
+@property
+Notes (Project)
+Notes (Continued)
+Introduction
+Getting Started
+Tasks
+Gather
+Website Status (Project)
+Mypy
+Walrus Operator
+Lambda Functions
+Generators
+Match-Case
+Decorators
+Decorators (Continued)
+Enums
+Memoization
+@cached_property
+Monkey Patching
+Timing Code
+Introduction
+Reading
+Appending
+Writing
+JSON
+Notepad (Project)
+
