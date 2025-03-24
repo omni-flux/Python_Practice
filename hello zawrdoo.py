@@ -114,3 +114,77 @@ some usefull pycharm shortcuts
 
 # - made simple adder project
 
+# Lists
+# my_list: list = ['hello',2,8+9j,[22,False]]
+# people : list[str] = ['bob','romane conti','natsuki subaru','rem']
+# print(people[0])
+# people.append('ram')
+# people.remove('romane conti')
+# people.pop() -> removes the last element
+# people[0] = "ecidina"
+# people.insert(2,'beti')
+
+# Tuples
+# tuples are immutable -> denoted by ,
+# items : tuple = 1,4,True
+# coord : tuple = 55,66
+# new_tuple : tuple = ()
+
+# crrt type annotation for tuple
+# coordinates: tuple[float,bool] = (55.0,True)
+
+# sets
+# set has no order unlike lists
+# they can not contain duplicates
+
+# elements: set  = {True,99,'bob'}
+# elements.add('James')
+# elements.remove('bob')
+# elements.pop() -> removes some thing randon
+# elemts.clear() -> removes every thing
+# elements.clear()
+# after clear iinstead of printing an empty set it prints set()
+# print(elements)
+# to create a empty set we need to do this beacause doing {} will create a dict
+# empty: set = set()
+# same can be done for any data type
+
+# frozenset -> immutable set
+# things : frozenset = frozenset({1,33,33,45})
+# print(things)
+
+# dictnory
+# weather: dict = {'time': '12:00','weather':{'morning':'rain',
+#                                             'evening':'more rain'}}
+# print(weather['weather']['morning'])
+#
+# users: dict = { 1: 'Luigi',2 : 'Mario'}
+# users[3] = 'bob'
+# del users[3]
+# # users.pop(3)
+# print("{} is a reletive of {}".format(users[2],users[1]))
+
+# None data type
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

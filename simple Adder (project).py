@@ -10,7 +10,7 @@ try:
         except ValueError as e:
             print("you have entered invalid inputs \nplease enter a valid numeric value.🙄")
 
-    print("_____________________________________")
+    print("____________________________________")
 
 except KeyboardInterrupt:
     print("\nbye bye.. 👋")
