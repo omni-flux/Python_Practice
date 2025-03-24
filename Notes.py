@@ -165,6 +165,13 @@ some usefull pycharm shortcuts
 # print("{} is a reletive of {}".format(users[2],users[1]))
 
 # None data type
+# no_value: None = None
+#
+# 🤨 union data type so it can be either or using '|'
+# possible_user : str | None = 'str'
+#
+# - MADE MADLIB PROJECT
+#
 
 
 
