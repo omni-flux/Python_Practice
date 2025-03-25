@@ -172,9 +172,48 @@ some usefull pycharm shortcuts
 #
 # - MADE MADLIB PROJECT
 #
+# conditional loops
+#
+# if-elif-else
+#
+#weather:str = 'cloudy'
+#
+# if weather == 'clear':
+#     print("it's a nice day")
+# elif weather == 'cloudy':
+#     print("The weather could be cloudy.")
+# else:
+#     print("IDK....🙄")
+#
+# the order of the checks matter
 
+# age : int = 22
+#
+# if age < 12:
+#     print("your a teenager")
+# elif age >= 18:
+#     print("your a young adult") #python gets to here and prints which is wrong
+# elif age > 25:
+#     print("your an adult")
+# else:
+#     print("unknown number")
+#
+# Correct way ✔️
+# if age > 25:
+#     print("your an Adult")
+# elif age >= 18:
+#     print("your a young adult")
+# elif age < 12:
+#     print("your a Teenager")
+# else:
+#     print("unknown number")
 
+# if-else shorthand
+# cannot short had if elif and else ladder
+# number:int = 0
+# value:str = 'above 0' if number > 0 else '0 and below 0'
 
+# for Loop
 
 
 
