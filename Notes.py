@@ -215,6 +215,107 @@ some usefull pycharm shortcuts
 
 # for Loop
 
+# text:str = 'Hello World'
+#
+# for i in range(3):
+#     print(f"{i}:{text}")
+#
+# people: list[str] = ['Bob','james','Maria']
+#
+# for person in people:
+#     if len(person) > 4:
+#         print(f'{person} has a long name')
+
+
+
+# while loop
+
+i: int = 5
+#
+# while i > 0 :
+#     print('hello')
+#     i -= 1
+#
+# while True:
+#     user_input: str = input('you:')
+#     if user_input == '💀' :
+#         print("bot:yes you are cooked")
+#     elif user_input == 'exit':
+#         quit(0)
+#     else:
+#         print("bot:what?")
+
+#
+# while i > 0:
+#     i -= 1
+#     if i == 2
+#       break
+
+# while i > 0:
+#     i -= 1
+#     if i == 3:
+#         print('skipping')
+#         continue
+#     print(i)
+#
+# total:int = 0
+#
+# while True:
+#     try:
+#         user_input:int = int(input("Enter a positive number:"))
+#
+#     except ValueError:
+#         print('i said a number dum dum..')
+#         continue
+#
+#     if user_input < 0:
+#         print('A +ve NUMBERRRR!!!.....')
+#         continue
+#
+#     if user_input == 0:
+#         print(f'Total: {total}')
+#         break
+#
+#     total += user_input
+
+# break and continue work same for 'for' loops
+
+# as a rare functionality the else block can be
+# added to a for loop or a while loop and it works
+# as a sucess block so if you break in between the else
+# block will not be executated
+
+# num : int = 5
+#
+# for i in range(num):
+#     if i < 5:
+#         print(i)
+# else:
+#     print('sucess') # will print sucess as no break
+#
+# for i in range(num):
+#     if i < 5:
+#         print(i)
+#         break
+# else:
+#     print('sucess') # will not print as the loop was broken
+
+# - made rock paper sissors game
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
