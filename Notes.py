@@ -302,6 +302,127 @@ i: int = 5
 
 # - made rock paper sissors game
 
+# functions
+#
+# def pp():
+#     print('Hello')
+#
+# pp()
+
+# pass keyword:
+# (placeholde)
+
+# def get_status():
+#     pass
+# def connect_to_interne():
+#     pass
+
+# pass not just used in function could be used anwwhere:
+
+# if 1>0:
+#     pass
+# coluld also use ... insread of pass so
+
+# def connect:
+#     ...
+
+# parameters and arguments
+
+# def greet(name:str): # -> when you define it it's called the parameter
+#     print(f'Hello {name}')
+#
+# greet("Mario")
+# greet("Luigi")  -> this is called an argument
+
+# def greet(name: str,language:str,default:str='Hello'):
+#     if language == 'ch':
+#         print(f"NI hao ma,{name}!")
+#     else:
+#         print(f"{default},{name}!")
+#
+# greet('mario','','')
+# so this has to be in correct order else you get missing positional arguments
+
+# greet(default='helo',language='ch',name='mario')
+#we can also call this way its called keyword-arguments
+# it can be in any order
+
+# greet('mario',language='ch')
+# we can also mix
+
+# return types , keyword in functions
+
+# def get_length(text:str) -> int:
+#     print(f'Gettinng the length of:{text}..')
+#     return len(text)
+#
+#
+# def make_upper(text:str) -> str:
+#     return text.upper()
+#
+# def connect_to_internet() -> None:
+#     print('connecting to internet')
+#
+
+# RECURSION
+#
+# def func() -> None:
+#     print('recursion')
+#     func()
+
+# import time
+# def connect_to_internet(signal:bool,delay:int) -> None:
+#      if delay < 5:
+#          signal = True
+#
+#      if signal:
+#          print("connected ...")
+#      else:
+#          print(f'failed to connect trying again in {delay}s...')
+#          time.sleep(delay)
+#          connect_to_internet(signal,delay+1)
+#
+# connect_to_internet(False,0)
+#
+
+# '*'args,'**'kwargs
+
+# args denoted by a '*' it absorbs all the arguments and converts it into a tuple (3,4,4) ex code: func(3,4,4)
+# kwargs denoted ba a '**' it absorbs all the keyword arguments and converts them into a dictionary {x:2,Y:7} ex code: func(x=2,y=7)
+
+# def add(*args:int) -> int:
+#     return print(sum(args))
+#
+# add(2,3,4,5,6)
+
+# one rule after a * you must call ** kwargs
+
+# def coordinates(**kwargs:int) -> None:
+#     print(kwargs)
+#
+# coordinates(x=2,y=3,z=1)
+
+#one more rule for keyword arguments they must follow a order they are declared in
+
+
+# * & / in functions
+
+# / and * used inside a function force every thing before / to be positional and after * to be kwargs
+# in between could be both
+# def exp(palce:str,/,time:int,*, name:str) -> None:
+#     print("sucess")
+#
+# exp('tokyo',7,name="omm")✔️
+# exp(place="tokyo",7,'omm')❌
+
+# - made simple chatbot project.
+
+
+
+
+
+
+
 
 
 
