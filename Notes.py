@@ -6,7 +6,11 @@ some usefull pycharm shortcuts
    shift + Alt + , or . -> increase or decrease font size
    ctrl + d -> duplicate the line
    ctrl + alt + l -> short-cut for formating
+   refactor -> shift + F6
 """
+from numpy.f2py.crackfortran import onlyfuncs
+from torch.ao.quantization import default_qat_qconfig_v2
+
 # print("hello")
 # python is case-sensitive so ✔️print()  and Print()❌
 # print("hello"+" bob")
@@ -417,14 +421,78 @@ i: int = 5
 
 # - made simple chatbot project.
 
+# user input
+import sys
+# total:int = 0
+# while True:
+#     user_input:str = input('Enter a number:')
+#     if user_input == 0:
+#         print('total:',total)
+#         sys.exit()
+#
+#     total += int(user_input)
+
+# try except
+#
+# try:
+#     result:float = 10/0
+#     print(result)
+# except Exception as e:
+#     print(f'error:{e}')
+
+# while True:
+#     try:
+#         user_input:str= input('Enter anumber:')
+#         print(f'10/{user_input}= {10/float(user_input)}')
+#     except ZeroDivisionError :
+#         print('can not divide by zero')
+#     except ValueError:
+#         print('please enter a valid error')
+#     except Exception as e:
+#         print(f'some thing went wrong{e}')
+#
+# total:int = 0
+# while True:
+#     user_input:str = input('Enter a number:')
+#     if user_input == '0':
+#         print('total:',total)
+#         sys.exit()
+#     try:
+#         total += int(user_input)
+#     except ValueError:
+#         print('enter a valid number')
+
+# else finally
+#
+# user_input:str='10'
+#
+# try:
+#     result:float = 1/float(user_input)
+#     print(f'1/{user_input}={result}')
+# except ValueError:
+#     print(f'\'{user_input}\' is not valid')
+# except ZeroDivisionError:
+#     print('you can\'t divide by 0 silly')
+# else:
+#     print('Executed successfully with out any errors ')
+# finally:
+#     print('no matter what ill execute')
+
+# raise keyword
+# raise Exception('this is a general exception')
+#
+# def check_age(age:int) -> bool:
+#     if age < 0:
+#         raise ValueError('not a valid age...')
+#     elif age >= 21:
+#         print('you are old enough')
+#         return True
+#     else:
+#         print('you are not old enough ')
+#         return False
 
 
-
-
-
-
-
-
+# - made project letters only
 
 
 
