@@ -7,7 +7,7 @@ def is_letter(text:str)-> None:
     for char in text:
         if char not in alphabet:
             raise ValueError("enter a valid str")
-    print(f'{text} only has characters from the english alphabet 😊')
+    print(f'\'{text}\' only has characters from the english alphabet 😊')
 
 
 def main() -> None:
@@ -19,7 +19,7 @@ def main() -> None:
         except KeyboardInterrupt:
             sys.exit()
         except ValueError:
-            print(f'please enter a valid value')
+            print(f'please enter a valid value \'{user_input}\' has characters \nthat are not in English alphabet 😓')
         except Exception as e:
             print(f'the program encountered an error:{e} of type:{type(e)}')
         if user_input in ['exit','quit','q','bye-bye']:

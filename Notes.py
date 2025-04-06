@@ -8,9 +8,6 @@ some usefull pycharm shortcuts
    ctrl + alt + l -> short-cut for formating
    refactor -> shift + F6
 """
-from numpy.f2py.crackfortran import onlyfuncs
-from torch.ao.quantization import default_qat_qconfig_v2
-
 # print("hello")
 # python is case-sensitive so ✔️print()  and Print()❌
 # print("hello"+" bob")
@@ -234,7 +231,7 @@ from torch.ao.quantization import default_qat_qconfig_v2
 
 # while loop
 
-i: int = 5
+# i: int = 5
 #
 # while i > 0 :
 #     print('hello')
@@ -422,7 +419,7 @@ i: int = 5
 # - made simple chatbot project.
 
 # user input
-import sys
+# import sys
 # total:int = 0
 # while True:
 #     user_input:str = input('Enter a number:')
@@ -495,16 +492,42 @@ import sys
 # - made project letters only
 
 
+# modules
+
+# import time
+#
+# print(time.sleep(2))
 
 
+# import greetings as g
+# from greetings import * # can be dangerous
+# from greetings import greet
+# g.greet('omm')
+# print(g.AUTHOR)
+
+# def main() -> None:
+#     ...
+#
+# if __name__ == '__main__':
+#     logic()
 
 
+# so if you create a module and import it in the main py file and run it the logic
+# the logic in the module file and main file will run twice so to prevent that
+# we write if __name__ == '__main__': so logic only runs if the file is being ran on its own
 
+# modules -> pacakeges -> libraries
 
+# -made website status project
 
-
-
-
+# Unpacking
+# This is called unpacking or sequence unpacking. The opposite would be packing or tuple packing. The asterisk operator
+# * can be used to unpack an iterable into a function's arguments or to collect multiple elements into a single variable
+# during unpacking.
+# def my_function(a, b, c):
+#   print(a, b, c)
+# my_list = [4, 5, 6]
+# my_function(*my_list) # Output: 4 5 6
 
 
 
