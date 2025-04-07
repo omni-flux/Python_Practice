@@ -547,49 +547,53 @@ my_function(*my_list) # Output: 4 5 6
 
 .1 + .2 != .3 but = 0.3000000000004
 
+
+
+
+scope
+number:int = 99 # global
+
+def print_number()-> None:
+    number =  99 # inner Shadows name •number from outer scope
+    print(number)
+
+global keyword
+number:int = 0 # global
+
+def change_number()-> None:
+    global number
+    number =  10 # inner
+
+print(number)
+change_number()
+print(number)
+
+non local keyword
+
+def outer_func() -> None:
+    name: str=''
+    value: int= 0
+
+    def inner_func() -> None:
+        name = 'tom' #Shadows name 'value' from outer scope
+        value = 100
+
+
+def outer_func() -> None:
+    name: str = ''
+    value: int = 0
+
+    def inner_func() -> None:
+        nonlocal name, value
+        name = 'tom'
+        value = 100
+
+
+list comprehension
+
 '''
+lhjvi
 
-
-# scope
-# number:int = 99 # global
-#
-# def print_number()-> None:
-#     number =  99 # inner Shadows name •number from outer scope
-#     print(number)
-
-# global keyword
-# number:int = 0 # global
-#
-# def change_number()-> None:
-#     global number
-#     number =  10 # inner
-#
-# print(number)
-# change_number()
-# print(number)
-#
-# non local keyword
-
-# def outer_func() -> None:
-#     name: str=''
-#     value: int= 0
-#
-#     def inner_func() -> None:
-#         name = 'tom' #Shadows name 'value' from outer scope
-#         value = 100
-
-
-# def outer_func() -> None:
-#     name: str = ''
-#     value: int = 0
-#
-#     def inner_func() -> None:
-#         nonlocal name, value
-#         name = 'tom'
-#         value = 100
-
-
-# list comprehension
 
 
 
