@@ -46,7 +46,7 @@ frozenraffel = frozenset({1,2,3,4}) cant change
 
 Type hints / anotations only for dev python dont care
 text : str  = '10' ✔️
-text : str = 10 will  give warning but python will still coppile
+text : str = 10 will  give warning but python will still compile
 
 Integer
 age: int = 21
@@ -60,14 +60,14 @@ Operators
 
 + - / *
 floor division //
-exponentioal **
+exponential **
 modulus %
 
 x: int = 2
 x += 2 # x = x + 2
 += -= *= **= /= //= %=
 
-comparision
+comparison
 a == b
 a != b
 a > b
@@ -84,7 +84,7 @@ logical
 string
 name : str = 'omkar'
 name : str = "omkar"
-say i want to adress some thing thats mine
+say i want to adress some thing that's mine
 name : str = "omkar's"  python be like :😊
 name : str = 'omkar's' python be like :😠
 so
@@ -589,10 +589,100 @@ def outer_func() -> None:
         value = 100
 
 
-list comprehension
+-truthy and falsy
+
+falsy values 
+data:dict = {}
+my_list: list = []
+my_tuple: tuple = ()
+empty_string: str = ''
+
+anything that contains a value is truthy
+
+--list comprehensions 
+
+doubled_list:list[int]=[]
+numbers:list[int]= [1,3,4,5,6]
+# this
+for num in numbers:
+    doubled_list.append(num*2)
+# or
+doubled_list = [num*2 for num in numbers ]
+
+# doubled_list:list[int]=[]
+print(doubled_list)
+
+names: list[str] = ['mario','james','luigi','john']
+j_names:list[str]=[]
+
+for name in names:
+    if name.startswith('j'):
+        j_names.append(name)
+
+# or
+j_names = [name
+           for name in names
+           if name.startswith('j')]
+
+
+
+numbers: list[int] = [3,4,56,23,3,302,8,5,65]
+even_number:list[int]=[]
+
+for num in numbers:
+    if num%2 == 0:
+        even_number.append(num)
+
+# or
+
+even_number_lc = [num
+                  for num in numbers
+                  if num%2 ==0]
+
+
+# --slicing
+
+numbers:list[int] = [1,2,3,4,5,6]
+print(numbers[0:3]) #[1,2,3]
+print(numbers[3:6]) #[4,5,6]
+# same
+print(numbers[:3])
+print(numbers[3:])
+
+# reverse
+print(numbers[-1]) #6
+
+print(numbers[::-1]) #:: everything and -1 reverses it
+
+print(numbers[0:6:3]) #:3  steps to 3
+
+name:str = 'mario'
+rev=name[::-1]
+print(rev)
+
+
+# if you loop through a list and try to modify it
+# un-wanted things csn happen like if we remove bob in cris move to index 2 but
+# the for loop has already gone to index 2 so it will not go again and chris just went missing in the void
+# hence do this
+
+people:list[str]= ['Anna','BOb','Chris','David','Fred']
+new_people: list[str] = []
+
+for person in people:
+    print(f'-{person}, {people. index(person)}')
+    if person == 'Bob':
+        print (f' Removing: {person}' )
+        continue
+    new_people.append(person)
+
+print(new_people)
+
+
+
+--made project Grocery list 
 
 '''
-lhjvi
 
 
 
