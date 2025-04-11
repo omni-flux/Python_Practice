@@ -23,7 +23,7 @@ try:
     while True:
         if conformation == 'y':
             story:str=f"""
-_________________________________________________________________________________________________________________dscnsbd            
+_________________________________________________________________________________________________________________          
             
 Once upon a time, there was a {age}-year-old {gender} named {name} who was obsessed with {hobby}. 🎨🚀🕺  
 Every single day, {pronoun} would {verb_a} through the {place} like a majestic chicken on roller skates. 🐔🛼  

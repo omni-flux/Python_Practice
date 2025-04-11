@@ -328,7 +328,7 @@ coluld also use ... insread of pass so
 def connect:
     ...
 
-parameters and arguments
+--------parameters and arguments
 
 def greet(name:str): # -> when you define it it's called the parameter
     print(f'Hello {name}')
@@ -343,7 +343,7 @@ def greet(name: str,language:str,default:str='Hello'):
         print(f"{default},{name}!")
 
 greet('mario','','')
-so this has to be in correct order else you get missing positional arguments
+so this has to be in crorect order else you get missing positional arguments
 
 greet(default='helo',language='ch',name='mario')
 we can also call this way its called keyword-arguments
@@ -352,10 +352,10 @@ it can be in any order
 greet('mario',language='ch')
 we can also mix
 
-return types , keyword in functions
+------------return types , keyword in functions
 
 def get_length(text:str) -> int:
-    print(f'Gettinng the length of:{text}..')
+    print(f'Getting the length of:{text}..')
     return len(text)
 
 
@@ -433,7 +433,8 @@ exp(place="tokyo",7,'omm')❌
 
 - made simple chatbot project.
 
-user input
+-------------user input
+
 import sys
 total:int = 0
 while True:
@@ -507,7 +508,7 @@ def check_age(age:int) -> bool:
 - made project letters only
 
 
-modules
+-------------------modules
 
 import time
 
@@ -535,7 +536,7 @@ modules -> pacakeges -> libraries
 
 -made website status project
 
-Unpacking
+----------------Unpacking
 This is called unpacking or sequence unpacking. The opposite would be packing or tuple packing. The asterisk operator
 * can be used to unpack an iterable into a function's arguments or to collect multiple elements into a single variable
 during unpacking.
@@ -550,14 +551,14 @@ my_function(*my_list) # Output: 4 5 6
 
 
 
-scope
+-----------------------scope
 number:int = 99 # global
 
 def print_number()-> None:
     number =  99 # inner Shadows name •number from outer scope
     print(number)
 
-global keyword
+----------------------global keyword
 number:int = 0 # global
 
 def change_number()-> None:
@@ -568,7 +569,7 @@ print(number)
 change_number()
 print(number)
 
-non local keyword
+--------------------non local keyword
 
 def outer_func() -> None:
     name: str=''
