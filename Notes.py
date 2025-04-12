@@ -155,7 +155,7 @@ frozenset -> immutable set
 things : frozenset = frozenset({1,33,33,45})
 print(things)
 
-dictnory
+------------------------------------------------dictionary
 weather: dict = {'time': '12:00','weather':{'morning':'rain',
                                             'evening':'more rain'}}
 print(weather['weather']['morning'])
@@ -174,9 +174,9 @@ possible_user : str | None = 'str'
 
 - MADE MADLIB PROJECT
 
-conditional loops
+------------------------------------------------conditional loops
 
-if-elif-else
+------------------------------------------------if-elif-else
 
 weather:str = 'cloudy'
 
@@ -230,7 +230,7 @@ for person in people:
 
 
 
-while loop
+-----------------------------------------------------while loop
 
 i: int = 5
 
@@ -311,7 +311,7 @@ def pp():
 
 pp()
 
-pass keyword:
+------------------------------------------------pass keyword:
 (placeholde)
 
 def get_status():
@@ -328,7 +328,7 @@ coluld also use ... insread of pass so
 def connect:
     ...
 
---------parameters and arguments
+----------------------------------------------parameters and arguments
 
 def greet(name:str): # -> when you define it it's called the parameter
     print(f'Hello {name}')
@@ -352,7 +352,7 @@ it can be in any order
 greet('mario',language='ch')
 we can also mix
 
-------------return types , keyword in functions
+----------------------------------------return types , keyword in functions
 
 def get_length(text:str) -> int:
     print(f'Getting the length of:{text}..')
@@ -366,7 +366,7 @@ def connect_to_internet() -> None:
     print('connecting to internet')
 
 
-RECURSION
+----------------------------------------------------RECURSION
 
 def func() -> None:
     print('recursion')
@@ -401,7 +401,7 @@ def connect_to_internet(signal:bool,delay:int) -> None:
 connect_to_internet(False,0)
 
 
-'*'args,'**'kwargs
+-----------------------------------------------'*'args,'**'kwargs
 
 args denoted by a '*' it absorbs all the arguments and converts it into a tuple (3,4,4) ex code: func(3,4,4)
 kwargs denoted ba a '**' it absorbs all the keyword arguments and converts them into a dictionary {x:2,Y:7} ex code: func(x=2,y=7)
@@ -433,7 +433,7 @@ exp(place="tokyo",7,'omm')❌
 
 - made simple chatbot project.
 
--------------user input
+-----------------------------------------------------user input
 
 import sys
 total:int = 0
@@ -445,7 +445,7 @@ while True:
 
     total += int(user_input)
 
-try except
+--------------------------------------------------------try except
 
 try:
     result:float = 10/0
@@ -508,7 +508,7 @@ def check_age(age:int) -> bool:
 - made project letters only
 
 
--------------------modules
+-------------------------------------------------modules
 
 import time
 
@@ -536,7 +536,7 @@ modules -> pacakeges -> libraries
 
 -made website status project
 
-----------------Unpacking
+-----------------------------------------------------Unpacking
 This is called unpacking or sequence unpacking. The opposite would be packing or tuple packing. The asterisk operator
 * can be used to unpack an iterable into a function's arguments or to collect multiple elements into a single variable
 during unpacking.
@@ -551,14 +551,14 @@ my_function(*my_list) # Output: 4 5 6
 
 
 
------------------------scope
+-------------------------------------------------------scope
 number:int = 99 # global
 
 def print_number()-> None:
     number =  99 # inner Shadows name •number from outer scope
     print(number)
 
-----------------------global keyword
+---------------------------------------------------global keyword
 number:int = 0 # global
 
 def change_number()-> None:
@@ -569,7 +569,7 @@ print(number)
 change_number()
 print(number)
 
---------------------non local keyword
+---------------------------------------------------non local keyword
 
 def outer_func() -> None:
     name: str=''
@@ -600,7 +600,7 @@ empty_string: str = ''
 
 anything that contains a value is truthy
 
---list comprehensions 
+------------------------------------------------list comprehensions 
 
 doubled_list:list[int]=[]
 numbers:list[int]= [1,3,4,5,6]
@@ -684,6 +684,9 @@ print(new_people)
 --made project Grocery list 
 
 '''
+
+#-------------------------------------------- OOP in python
+
 
 
 
