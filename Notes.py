@@ -686,6 +686,197 @@ print(new_people)
 '''
 
 #-------------------------------------------- OOP in python
+#
+# class Cars:
+#     def __init__(self,brand:str,wheels:int)->None:
+#         self.brand = brand
+#         self.wheels = wheels
+#
+#     def turn_on(self)->None:
+#         print(f'Turning on:{self.brand}')
+#
+#     def turn_off(self)->None:
+#         print(f'Turning off:{self.brand}')
+#
+#     def drive(self,km:float)->None:
+#         print(f'Driving {self.brand} for {km}km')
+#
+#     def describe(self) -> None:
+#         print(f'{self.brand} is a car with {self.wheels}')
+#
+#
+# def main() -> None:
+#     bmw: Cars = Cars('BMW',4)
+#     bmw.turn_on()
+#     bmw.drive(10)
+#     bmw.turn_off()
+#     bmw.describe()
+#
+#     volvo:Cars = Cars('volvo',6)
+#     volvo.turn_on()
+#     volvo.drive(5.6)
+#     volvo.turn_off()
+#
+# if __name__ == '__main__':
+#     main()
+
+
+# ------------------------------ __init__()
+#
+# __init__() grants the ability to customise any new instance of a class it is
+# called every time a new object is instantiated of the type of the class
+#
+# class Connection:
+#     def __init__(self,type:str,rate:int)->None:
+#         self.type = type
+#         self.rate = rate
+#         print(f'the {self.type} connection was established it costs ₹{rate}/hr')
+#
+#     def disconnect(self)->None:
+#         print(f'{self.type} was disconnected...')
+#
+# def main() -> None:
+#     cellular:Connection = Connection('cellular',50)
+#     internet:Connection = Connection('internet',90)
+#     internet.disconnect()
+#     cellular.disconnect()
+#
+# if __name__ == '__main__':
+#     main()
+
+
+# ---------------------------------------- self
+# self refers to the current instance of a class
+# so as __init__() creates an instance self helps identify which in stance it is
+# Also it's just a naming convention it can be named something else as well but not recommended
+
+
+# class Fruit:
+#     def __init__(self,name:str,grams:float)->None:
+#         self.name = name
+#         self.grams = grams
+#
+#     def eat(self)->None:
+#         print(f'eating {self.grams} grams of {self.name}')
+#
+# def main() -> None:
+#     appel: Fruit = Fruit('appel',50) #so here self would be appel
+#     appel.eat()
+#
+#     banana: Fruit = Fruit('banana',7) #and here it would be banana
+#     banana.eat()
+#
+#
+# if __name__ == '__main__':
+#     main()
+
+#---------------------------------Attributes(class & instances)
+
+# the self and __init__() were instance attributes but we can also
+# have class attributes that are shared among all the instances of that class
+
+# class Car:
+#     SPEED_LIMIT: float = 140
+#     def __init__(self,brand:str)->None:
+#         self.brand = brand
+#
+#     def drive(self,*,speed:float) -> None:
+#         if speed > self.SPEED_LIMIT:
+#             print(f'limiter activated driving at {self.SPEED_LIMIT}')
+#         else:
+#             print(f'driving {self.brand} at {speed}')
+#
+# def main() -> None:
+#     bmw:Car = Car('BMW')
+#     bmw.drive(speed=150)
+#     Car.SPEED_LIMIT = 200
+#     bmw.drive(speed=150)
+#
+# if __name__ == '__main__':
+#     main()
+
+
+# dangerous part of class attributes
+
+# class Animals:
+#     tricks:list[str] = []  #as this is a class atrribute it is shared by each instance so dog will meow
+#     def __init__(self,name:str)->None:
+#         self.name = name
+#
+#     def teach_trick(self,trick:str)->None:
+#         self.tricks.append(trick)
+#
+# def main() -> None:
+#     cat:Animals = Animals('cat')
+#     dog:Animals = Animals('dog')
+#     cat.teach_trick('meow')
+#     dog.teach_trick('bark')
+#
+#     print(cat.tricks)
+#     print(dog.tricks)
+# if __name__ == '__main__':
+#     main()
+
+#  so to fix that we do this declare tricks as a instance attribute
+
+# class Animals:
+#     def __init__(self,name:str)->None:
+#         self.name = name
+#         self.tricks:list[str] = []
+#     def teach_trick(self,trick:str)->None:
+#         self.tricks.append(trick)
+#
+# def main() -> None:
+#     cat:Animals = Animals('cat')
+#     dog:Animals = Animals('dog')
+#     cat.teach_trick('meow')
+#     dog.teach_trick('bark')
+#
+#     print(cat.tricks)
+#     print(dog.tricks)
+# if __name__ == '__main__':
+#     main()
+# -- note to my self study about typing module
+# -------------------------- dunder methods
+
+# from typing import Self
+#
+# class Book:
+#     def __init__(self,title:str,pages:int)->None:
+#         self.title = title
+#         self.pages = pages
+#
+#     def __len__(self)->int:
+#         return self.pages
+#
+#     def __add__(self, other:Self)->Self:
+#         combined_title:str = f'{self.title} & {other.title}'
+#         combined_pages:str = self.pages + other.pages
+#         return Book(combined_title,combined_pages)
+#
+#
+# def main() -> None:
+#     oriely_python : Book = Book('oriely_python',500)
+#     monogatari:Book = Book('monogatari',1000)
+#
+#     print(len(oriely_python))
+#     combined_books : Book = oriely_python + monogatari
+#     print(combined_books.title)
+#     print(combined_books.pages)
+#
+# if __name__ == '__main__':
+#     main()
+
+
+# ------------------------------------- __str__(),__repr__()
+
+
+
+
+
+
+
+
 
 
 
