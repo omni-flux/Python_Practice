@@ -401,7 +401,7 @@ def connect_to_internet(signal:bool,delay:int) -> None:
 connect_to_internet(False,0)
 
 
------------------------------------------------'*'args,'**'kwargs
+--------------------------------------------------'*'args,'**'kwargs
 
 args denoted by a '*' it absorbs all the arguments and converts it into a tuple (3,4,4) ex code: func(3,4,4)
 kwargs denoted ba a '**' it absorbs all the keyword arguments and converts them into a dictionary {x:2,Y:7} ex code: func(x=2,y=7)
@@ -536,7 +536,7 @@ modules -> pacakeges -> libraries
 
 -made website status project
 
------------------------------------------------------Unpacking
+------------------------------------------------------------Unpacking
 This is called unpacking or sequence unpacking. The opposite would be packing or tuple packing. The asterisk operator
 * can be used to unpack an iterable into a function's arguments or to collect multiple elements into a single variable
 during unpacking.
@@ -548,17 +548,14 @@ my_function(*my_list) # Output: 4 5 6
 
 .1 + .2 != .3 but = 0.3000000000004
 
-
-
-
--------------------------------------------------------scope
+------------------------------------------------------------------scope
 number:int = 99 # global
 
 def print_number()-> None:
     number =  99 # inner Shadows name •number from outer scope
     print(number)
 
----------------------------------------------------global keyword
+----------------------------------------------------------------global keyword
 number:int = 0 # global
 
 def change_number()-> None:
@@ -569,7 +566,7 @@ print(number)
 change_number()
 print(number)
 
----------------------------------------------------non local keyword
+----------------------------------------------------------------non local keyword
 
 def outer_func() -> None:
     name: str=''
@@ -600,7 +597,7 @@ empty_string: str = ''
 
 anything that contains a value is truthy
 
-------------------------------------------------list comprehensions 
+--------------------------------------------------------------list comprehensions 
 
 doubled_list:list[int]=[]
 numbers:list[int]= [1,3,4,5,6]
@@ -641,7 +638,7 @@ even_number_lc = [num
                   if num%2 ==0]
 
 
-# --slicing
+# ---------------------------------------------------------------slicing
 
 numbers:list[int] = [1,2,3,4,5,6]
 print(numbers[0:3]) #[1,2,3]
@@ -663,7 +660,7 @@ print(rev)
 
 
 # if you loop through a list and try to modify it
-# un-wanted things csn happen like if we remove bob in cris move to index 2 but
+# un-wanted things can happen like if we remove bob in cris move to index 2 but
 # the for loop has already gone to index 2 so it will not go again and chris just went missing in the void
 # hence do this
 
@@ -683,9 +680,9 @@ print(new_people)
 
 --made project Grocery list 
 
-'''
 
-#-------------------------------------------- OOP in python
+
+#--------------------------------------------------------------- OOP in python
 #
 # class Cars:
 #     def __init__(self,brand:str,wheels:int)->None:
@@ -721,7 +718,7 @@ print(new_people)
 #     main()
 
 
-# ------------------------------ __init__()
+# ---------------------------------------------------------------- __init__()
 #
 # __init__() grants the ability to customise any new instance of a class it is
 # called every time a new object is instantiated of the type of the class
@@ -745,7 +742,7 @@ print(new_people)
 #     main()
 
 
-# ---------------------------------------- self
+# ----------------------------------------------------------- self
 # self refers to the current instance of a class
 # so as __init__() creates an instance self helps identify which in stance it is
 # Also it's just a naming convention it can be named something else as well but not recommended
@@ -770,7 +767,7 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
-#---------------------------------Attributes(class & instances)
+#------------------------------------------------Attributes(class & instances)
 
 # the self and __init__() were instance attributes but we can also
 # have class attributes that are shared among all the instances of that class
@@ -837,7 +834,7 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 # -- note to my self study about typing module
-# -------------------------- dunder methods
+# ---------------------------------------------------------------dunder methods
 
 # from typing import Self
 #
@@ -868,11 +865,83 @@ print(new_people)
 #     main()
 
 
-# ------------------------------------- __str__(),__repr__()
+# ------------------------------------------------------- __str__(),__repr__()
+# by default when you print an instantiated object lets say from class book it returns <__main__.book object at x00000347634>
+# which is a memory location which is what repr returns this is helpful for devs but say a user print the object and their puny brain
+# if flash banged by looking at an actual memory location we could prevent that by defining __str__() now when they print it, they will get a
+# well abstracted string and the dev has to call repr() on the obj to see its location if we dont define __str__ it fallbacks to __repr__
 
 
+# class Person:
+#     def __init__(self,name:str,age:int)->None:
+#         self.name = name
+#         self.age = age
+# def main() -> None:
+#     mario:Person  = Person('mario',27)
+#     print(mario) # <__main__.Person object at 0x000002A71561AD50>
+# if __name__ == '__main__':
+#     main()
 
+# now lets change that
+# class Person:
+#     def __init__(self,name:str,age:int)->None:
+#         self.name = name
+#         self.age = age
+#         self.location = hex(id(self))
+#
+#     def __str__(self) -> str:
+#         return f'the person is named {self.name} and they are {self.age} years old'
+#
+#     def __repr__(self) -> str:
+#         return f'person(name={self.name},age={self.age})'
+#
+# def main():
+#     mario:Person  = Person('mario',27)
+#     print(mario)
+#     print(repr(mario))
+# if __name__ == '__main__':
+#     main()
 
+#------------------------------------------------------------- __eq()__
+# __dict__
+
+# so the __eq()__ dunder method lets you check weather an instance of a class is equal or not it compares the
+# memory locations for comparision wich can return false even if all the attributes we declared are same so we can change
+# how that behaves and __dict__ dunder method just returns a dictionary of all the instance attributes and their values
+
+# class Car:
+#     def __init__(self,brand:str,car_id:int,colour:str) -> None:
+#         self.brand = brand
+#         self.car_id = car_id
+#         self.colour = colour
+# def main() -> None:
+#     car1:Car = Car('volvo',1,'red')
+#     car2:Car = Car('volvo',1,'red')
+#     print(car1 == car2) # returns false even if the attributes are same cause it has diff memory location
+# if __name__ == '__main__':
+#     main()
+
+# from typing import Self
+# class Car:
+#     def __init__(self,brand:str,car_id:int,colour:str) -> None:
+#         self.brand = brand
+#         self.car_id = car_id
+#         self.colour = colour
+# 
+#     def __eq__(self, other:Self)->bool:
+#         print(self.__dict__) #{'brand': 'volvo', 'car_id': 1, 'colour': 'red'}
+#         print(other.__dict__) #{'brand': 'volvo', 'car_id': 1, 'colour': 'red'}
+#         return self.__dict__ == other.__dict__
+#     
+# def main() -> None:
+#     car1:Car = Car('volvo',1,'red')
+#     car2:Car = Car('volvo',1,'red')
+#     print(car1 == car2)# now it returns True 
+# if __name__ == '__main__':
+#     main()
+'''
+
+#
 
 
 
