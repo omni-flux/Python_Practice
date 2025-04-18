@@ -981,41 +981,69 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
-# ------------------------super()
+# ------------------------------------super()
+#
+# from typing import override
+#
+# class Shape:
+#     def __init__(self,name:str,sides:int)->None:
+#         self.name = name
+#         self.sides = sides
+#
+#     def describe(self)->None:
+#         print(f'{self.name}({self.sides} sides)')
+#
+#     def shape_method(self)->None:
+#         print(f'{self.name}: shape_method()')
+#
+# class Square(Shape):
+#     def __init__(self, size:float):
+#         super().__init__('Square', 4)
+#         self.size = size
+#     @override
+#     def describe(self) ->None:
+#         print(f'i am a {self.name} with a size of {self.size}')
+#
+#
+# def main() -> None:
+#     squar: Square = Square(20)
+#     squar.describe()
+#     squar.shape_method()
+# if __name__ == '__main__':
+#     main()
 
-from typing import override
+# -------------------------------@staticmethod
+# when a method has nothing to do with the class its called a static method so it
+# should be declared outside the class but if you want to keep it in side the class
+# you write the decorator @staticmethod on top of it
+# class Calculator:
+#     def __init__(self,version:int)->None:
+#         self.version = version
+#
+#     @staticmethod
+#     def add(*numbers:float)->float:
+#         return sum(numbers)
+#
+#     def get_version(self) -> int:
+#         return self.version
+# def main() -> None:
+#     calc:Calculator = Calculator(version=1)
+#     result: float = calc.add(1,2,3,4,56,7,8,9,9,0)
+#     result: float = Calculator.add(1,2,3,4,56)
+# if __name__ == '__main__':
+#     main()
 
-class Shape:
-    def __init__(self,name:str,sides:int)->None:
-        self.name = name
-        self.sides = sides
+#----------------------------------@classmethod
+from typing import Self
 
-    def describe(self)->None:
-        print(f'{self.name}({self.sides} sides)')
+class Car:
+    LIMITER:int = 200
 
-    def shape_method(self)->None:
-        print(f'{self.name}: shape_method()')
+    def __init__(self,brand:str, max_speed:int)->None:
+        self.brand = brand
+        self.max_speed = max_speed
 
-class Square(Shape):
-    def __init__(self, size:float):
-        super().__init__('Square', 4)
-        self.size = size
-
-    @override
-    def describe(self) ->None:
-        print(f'i am a {self.name} with a size of {self.size}')
-
-def main() -> None:
-    square:Square = Square(20)
-
-
-if __name__ == '__main__':
-    main()
-
-
-
-
-
+    @classmethod
 
 
 
