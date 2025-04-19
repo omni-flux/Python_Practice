@@ -8,8 +8,6 @@ some usefull pycharm shortcuts
    ctrl + alt + l -> short-cut for formating
    refactor -> shift + F6
 """
-from torch.distributions.constraints import square
-
 '''
 print("hello")
 python is case-sensitive so ✔️print()  and Print()❌
@@ -836,7 +834,7 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 # -- note to my self study about typing module
-# ---------------------------------------------------------------dunder methods
+# ------------------------------------------------------------------dunder methods
 
 # from typing import Self
 #
@@ -867,7 +865,7 @@ print(new_people)
 #     main()
 
 
-# ------------------------------------------------------- __str__(),__repr__()
+# ----------------------------------------------------------- __str__(),__repr__()
 # by default when you print an instantiated object lets say from class book it returns <__main__.book object at x00000347634>
 # which is a memory location which is what repr returns this is helpful for devs but say a user print the object and their puny brain
 # if flash banged by looking at an actual memory location we could prevent that by defining __str__() now when they print it, they will get a
@@ -981,7 +979,7 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
-# ------------------------------------super()
+# ---------------------------------------super()
 #
 # from typing import override
 #
@@ -1012,7 +1010,7 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
-# -------------------------------@staticmethod
+# ----------------------------------@staticmethod
 # when a method has nothing to do with the class its called a static method so it
 # should be declared outside the class but if you want to keep it in side the class
 # you write the decorator @staticmethod on top of it
@@ -1033,25 +1031,186 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
-#----------------------------------@classmethod
-from typing import Self
+#----------------------------------------@classmethod
+# class method takes cls as argument instead of self and modifies
+# class attributes whose change can be felt in all the instances
+# of a class
+#
+# from typing import Self
+# class Car:
+#     LIMITER:int = 200
+#
+#     def __init__(self,brand:str, max_speed:int)->None:
+#         self.brand = brand
+#         self.max_speed = max_speed
+#
+#     @classmethod
+#     def change_limit(cls,new_limit: int)-> None:
+#         cls.LIMITER = new_limit
+#
+#     def display_info(self)->None:
+#         print(f'{self.brand} (max{self.max_speed},limiter={self.LIMITER})')
+#         if self.max_speed > self.LIMITER:
+#             print(f'Pullover right now {self.brand}, stop right there!! 🚓🚨')
+#
+# def main() -> None:
+#     bmw: Car = Car('BMW', 240)
+#     toyota: Car = Car('Toyota',190)
+#     lambo: Car = Car('lambo', 340)
+#
+#     bmw.display_info()
+#     toyota.display_info()
+#     lambo.display_info()
+#
+#     Car.change_limit(300)
+#
+#     bmw.display_info()
+#     toyota.display_info()
+#     lambo.display_info()
+#
+# if __name__ == '__main__':
+#     main()
 
-class Car:
-    LIMITER:int = 200
+# -------------------------------factorymethod??
 
-    def __init__(self,brand:str, max_speed:int)->None:
-        self.brand = brand
-        self.max_speed = max_speed
+# from typing import Self
+# class Car:
+#     LIMITER:int = 200
+#
+#     def __init__(self,brand:str, max_speed:int)->None:
+#         self.brand = brand
+#         self.max_speed = max_speed
+#
+#     @classmethod
+#     def change_limit(cls,new_limit: int)-> None:
+#         cls.LIMITER = new_limit
+#
+#     @classmethod
+#     def autogenerate_max_speed(cls,brand:str) -> Self:
+#         lowered: str = brand.lower()
+#         max_speed:int = 200
+#         if lowered == 'toyota':
+#             max_speed = 270
+#         elif lowered == 'bmw':
+#             max_speed = 290
+#         elif lowered == 'volvo':
+#             max_speed = 300
+#         return cls(brand, max_speed)
+#
+#
+#     def display_info(self)->None:
+#         print(f'{self.brand} (max{self.max_speed},limiter={self.LIMITER})')
+#         if self.max_speed > self.LIMITER:
+#             print(f'Pullover right now {self.brand}, stop right there!! 🚓🚨')
+#
+# def main() -> None:
+#     volvo:Car = Car.autogenerate_max_speed('volvo')
+#     volvo.display_info()
+#
+# if __name__ == '__main__':
+#     main()
 
-    @classmethod
+# -------------------------------------@abstractmethhod
+# it basically creates a blueprint for a  class inheriting to follow
+# or else python will throw a squiggly line and
+# TypeError: Can't instantiate abstract class name without an
+# implementation for abstract methods 'turn_off', 'turn_on'.
+# ABC -> Abstract base class
+
+# from abc import ABC, abstractmethod
+#
+# class Appliance(ABC):
+#     def __init__(self, brand:str,version_no: int) -> None:
+#         self.brand = brand
+#         self.version_no = version_no
+#         self.is_turned_on: bool = False
+#
+#     @abstractmethod
+#     def turn_on(self)->None:
+#         ...
+#     @abstractmethod
+#     def turn_off(self)->None:
+#         ...
+#
+# class Lamp(Appliance):
+#     def __init__(self, brand: str, version_no: int):
+#         super().__init__(brand, version_no)
+#
+#     def turn_on(self) ->None:
+#         if self.is_turned_on:
+#             print(f'{self.brand} is already turned on!')
+#         else:
+#             self.is_turned_on = True
+#             print(f'{self.brand} is now turned on!')
+#     def turn_off(self) ->None:
+#         if self.is_turned_on:
+#             self.is_turned_on = False
+#             print(f'{self.brand} is now turned off')
+#         else:
+#             print(f'{self.brand} is already turned off!')
+#
+# class Oven(Appliance):
+#     def __init__(self, brand: str, version_no: int):
+#         super().__init__(brand, version_no)
+#
+#     def turn_off(self) ->None:
+#         raise NotImplementedError('Need to add functionality for turn_off()')
+#
+#     def turn_on(self) ->None:
+#         raise NotImplementedError('Need to add functionality for turn_on()')
+#
+# def main() -> None:
+#      oven:Oven = Oven('bosh',1)
+#      lamp: Lamp = Lamp('Z-Lite',1)
+#      lamp.turn_on()
+#      lamp.turn_on()
+#      lamp.turn_off()
+#      lamp.turn_off()
+# if __name__ == '__main__':
+#     main()
 
 
-
-
-
-
-
-
+#------------------------------------Name Mangling
+# basically public,private and protected in the case os python
+# when you declare a attribute or a var by __attribute python internally
+# changes its name to _class__attribute so we cant acess it even if we did
+# self.__attribute we have to do self._class__attribute i dont kow if its a complete
+# implementation like in java or c with separate keywords like private protected or not
+# ALSO __YEAR makes it so you cant even use it in subclasses so to do that you have to
+#declare it as _YEAR
+#
+# class Car:
+#     __YEAR:int = 2000
+#
+#     def __init__(self,brand:str, fuel_type:str) -> None:
+#         self.__brand = brand
+#         self.__fuel_type = fuel_type
+#         self.var:str = 'red'
+#
+#     def drive(self)->None:
+#         print(f'driving: {self.__brand}')
+#
+#     def __get_description(self)-> None:
+#         print(f'{self.__brand}: {self.__fuel_type}')
+#
+#     def display_colour(self)->None:
+#         print(f'{self.__brand} is \'{self.var.capitalize()}\'')
+#
+# # class Toyota(Car):
+# #     def __init__(self, brand: str, fuel_type: str):
+# #         super().__init__(brand, fuel_type)
+# #         self.var = 100 #this will cause AttributeError: 'int' object has no attribute 'capitalize'
+# #         # because var was a str in the Car class which could have
+# #         #been prevented if we used __var to make it protected
+#
+# def main() -> None:
+#     car:Car = Car('toyota','electric')
+#     car.drive()
+#     # print(car.__get_description()) AttributeError: 'Car' object has no attribute '__get_description'.
+#     car._Car__get_description() #Access to a protected member _Car__get_description of a class
+#     print(car._Car__YEAR)
+# if __name__ == '__main__':
+#     main()
 
 
 
