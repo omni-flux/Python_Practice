@@ -7,5 +7,5 @@ practicing python daily
 
 would be nice if i got a job and got some money ill get a gym membership with that money and go to the gym so i dotnt feel bad about myself and also buy and eat chicken daily 
 
-
+![Image](https://github.com/user-attachments/assets/e5ad8513-4d74-4561-bbcc-8df2d76e8cf1)
 
