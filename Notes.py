@@ -1212,21 +1212,30 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
+#-------------------------------------- built in functions
+#
 
+# ---------------------------------------print()
+# # @overload
+# # def print(*values: object,
+# #           sep: str | None = " ",
+# #           end: str | None = "\n",
+# #           file: SupportsWrite[str] | None = None,
+# #           flush: Literal[False] = False) -> None
+#
+# print('luke','von','emia',sep=',',end='.\n')
+# print('2003','06','21',sep='/',end='.')
+#
+# lst:list[str] = ['orange','carrot','tomato','ginger']
+# print(*lst,sep='\n')
 
+# ---------------------------------enumerate()
 
+elements: list[str] = ['A','B','C']
 
+enumeration: enumerate = enumerate(elements,start=1)
 
-
-
-
-
-
-
-
-
-
-
+for i, element in enumerate(elements):
 
 
 
