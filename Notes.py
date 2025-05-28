@@ -9,6 +9,7 @@ some usefull pycharm shortcuts
    refactor -> shift + F6
 """
 '''
+
 print("hello")
 python is case-sensitive so ✔️print()  and Print()❌
 print("hello"+" bob")
@@ -215,21 +216,17 @@ cannot short had if elif and else ladder
 number:int = 0
 value:str = 'above 0' if number > 0 else '0 and below 0'
 
-for Loop
-
-text:str = 'Hello World'
+-----------------------------------------------------for Loop
+text: str = 'Hello World'
 
 for i in range(3):
-    print(f"{i}:{text}")
+    print(f'{i}:{text}')
 
-people: list[str] = ['Bob','james','Maria']
+people: list[str] = ['Bob', 'james', 'Maria']
 
 for person in people:
     if len(person) > 4:
         print(f'{person} has a long name')
-
-
-
 -----------------------------------------------------while loop
 
 i: int = 5
@@ -304,7 +301,7 @@ else:
 
 - made rock paper sissors game
 
-functions
+-------------------------------------------------functions
 
 def pp():
     print('Hello')
@@ -371,20 +368,20 @@ def connect_to_internet() -> None:
 def func() -> None:
     print('recursion')
     func()
+func()
 
 def fact(num:int)->int:
     if num <= 1:
         return 1
     return num * fact(num-1)
 
-def fibonacii(num:int)-> int:
+def fibonacii(num:int)-> int:  #this is wrong i think its missing 1 or 2 more if conditional statements in addition to num <= 0
     if num <= 0:
         return num
 
     return fibonacii(num-1) + fibonacii(num-2)
 
-print(fibonacii(48))
-
+print(fibonacii(40))
 
 import time
 def connect_to_internet(signal:bool,delay:int) -> None:
@@ -491,7 +488,7 @@ else:
 finally:
     print('no matter what ill execute')
 
-raise keyword
+---------------------------------------------------------------raise keyword
 raise Exception('this is a general exception')
 
 def check_age(age:int) -> bool:
@@ -508,12 +505,9 @@ def check_age(age:int) -> bool:
 - made project letters only
 
 
--------------------------------------------------modules
-
+-------------------------------------------------------------------modules
 import time
-
 print(time.sleep(2))
-
 
 import greetings as g
 from greetings import * # can be dangerous
@@ -556,6 +550,7 @@ def print_number()-> None:
     print(number)
 
 ----------------------------------------------------------------global keyword
+
 number:int = 0 # global
 
 def change_number()-> None:
@@ -587,7 +582,7 @@ def outer_func() -> None:
         value = 100
 
 
--truthy and falsy
+--------------------------------------------------------------------truthy and falsy
 
 falsy values 
 data:dict = {}
@@ -638,7 +633,7 @@ even_number_lc = [num
                   if num%2 ==0]
 
 
-# ---------------------------------------------------------------slicing
+# -------------------------------------------------------------------slicing
 
 numbers:list[int] = [1,2,3,4,5,6]
 print(numbers[0:3]) #[1,2,3]
@@ -744,7 +739,7 @@ print(new_people)
 
 # ----------------------------------------------------------- self
 # self refers to the current instance of a class
-# so as __init__() creates an instance self helps identify which in stance it is
+# so as __init__() creates an instance self helps identify which instance it is
 # Also it's just a naming convention it can be named something else as well but not recommended
 
 
@@ -814,7 +809,7 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
-#  so to fix that we do this declare tricks as a instance attribute
+#  so to fix that we need to declare tricks as a instance attribute
 
 # class Animals:
 #     def __init__(self,name:str)->None:
@@ -881,19 +876,19 @@ print(new_people)
 #     print(mario) # <__main__.Person object at 0x000002A71561AD50>
 # if __name__ == '__main__':
 #     main()
-
-# now lets change that
+#
+#now lets change that
+#
 # class Person:
 #     def __init__(self,name:str,age:int)->None:
 #         self.name = name
 #         self.age = age
 #         self.location = hex(id(self))
-#
 #     def __str__(self) -> str:
 #         return f'the person is named {self.name} and they are {self.age} years old'
 #
 #     def __repr__(self) -> str:
-#         return f'person(name={self.name},age={self.age})'
+#         return f'person(name={self.name},age={self.age},location={self.location})'
 #
 # def main():
 #     mario:Person  = Person('mario',27)
@@ -939,9 +934,9 @@ print(new_people)
 #     print(car1 == car2)# now it returns True 
 # if __name__ == '__main__':
 #     main()
-'''
+"""
 
-#-------------------------------inheritance
+# -------------------------------inheritance
 #
 # class Animal:
 #     def __init__(self,name:str)->None:
@@ -1004,9 +999,9 @@ print(new_people)
 #
 #
 # def main() -> None:
-#     squar: Square = Square(20)
-#     squar.describe()
-#     squar.shape_method()
+#     square: Square = Square(20)
+#     square.describe()
+#     square.shape_method()
 # if __name__ == '__main__':
 #     main()
 
@@ -1031,7 +1026,7 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
-#----------------------------------------@classmethod
+# ----------------------------------------@classmethod
 # class method takes cls as argument instead of self and modifies
 # class attributes whose change can be felt in all the instances
 # of a class
@@ -1170,14 +1165,14 @@ print(new_people)
 #     main()
 
 
-#------------------------------------Name Mangling
+# ------------------------------------Name Mangling
 # basically public,private and protected in the case os python
 # when you declare a attribute or a var by __attribute python internally
 # changes its name to _class__attribute so we cant acess it even if we did
 # self.__attribute we have to do self._class__attribute i dont kow if its a complete
 # implementation like in java or c with separate keywords like private protected or not
 # ALSO __YEAR makes it so you cant even use it in subclasses so to do that you have to
-#declare it as _YEAR
+# declare it as _YEAR
 #
 # class Car:
 #     __YEAR:int = 2000
@@ -1212,7 +1207,7 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
-#-------------------------------------- built in functions
+# -------------------------------------- built in functions
 #
 
 # ---------------------------------------print()
@@ -1231,22 +1226,10 @@ print(new_people)
 
 # ---------------------------------enumerate()
 
-elements: list[str] = ['A','B','C']
+elements: list[str] = ['A', 'B', 'C']
 
-enumeration: enumerate = enumerate(elements,start=1)
+enumeration: enumerate = enumerate(elements, start=1)
 
 # for i, element in enumerate(elements):
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+'''
