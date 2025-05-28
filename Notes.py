@@ -1091,7 +1091,7 @@ print(new_people)
 #         elif lowered == 'volvo':
 #             max_speed = 300
 #         return cls(brand, max_speed)
-
+#
 #
 #     def display_info(self)->None:
 #         print(f'{self.brand} (max{self.max_speed},limiter={self.LIMITER})')
