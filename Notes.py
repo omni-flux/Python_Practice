@@ -1166,7 +1166,7 @@ print(new_people)
 
 
 # ------------------------------------Name Mangling
-# basically public,private and protected in the case os python
+# basically public,private and protected in the case of python
 # when you declare a attribute or a var by __attribute python internally
 # changes its name to _class__attribute so we cant acess it even if we did
 # self.__attribute we have to do self._class__attribute i dont kow if its a complete
