@@ -8,6 +8,7 @@ some usefull pycharm shortcuts
    ctrl + alt + l -> short-cut for formating
    refactor -> shift + F6
 """
+
 '''
 
 print("hello")
@@ -1223,13 +1224,76 @@ print(new_people)
 #
 # lst:list[str] = ['orange','carrot','tomato','ginger']
 # print(*lst,sep='\n')
-
+'''
 # ---------------------------------enumerate()
 
-elements: list[str] = ['A', 'B', 'C']
+# elements: list[str] = ['A', 'B', 'C']
+# i: int = 0
 
-enumeration: enumerate = enumerate(elements, start=1)
+# for element in elements:
+#     i += 1
+#     print(f'{i}:{elements}')
+
+# elements: list[str] = ['A', 'B', 'C']
+# enumeration: enumerate = enumerate(elements, start=1)
+# print(enumeration)
+# print(list(enumeration))
 
 # for i, element in enumerate(elements):
+#     print(f'{i}:{element}')
 
-'''
+# --------------------------------------round()
+
+# a: float = 200.312399
+# b: float = 18.12132
+# c: float = 47.12312
+
+# result: float = a + b + c
+# print(round(result, 2))   # 265.56
+# print(round(result, 1))  # 265.6
+# print(round(result, 0))  # 266.0
+# print(round(result, -1))  # 270.0
+# print(round(result, -2))  # 300.0
+
+# print(round(2.333333 ,1))
+
+# ------------------------------------------range()
+
+# my_range: range = range(1, 6)
+# # the upper bound is exclusive not included i.e 6 is not included
+# print(my_range)
+# print(list(my_range))
+# # range(1, 6)
+# # [1, 2, 3, 4, 5]
+
+# my_range1: range = range(0, 10, 2)  # steps by 2
+# print(my_range1)
+# print(list(my_range1))
+# # range(0, 10, 2)
+# # [0, 2, 4, 6, 8]
+
+# my_range2: range = range(5)  # range is (0,5)
+# print(my_range2)
+# print(list(my_range2))
+# # range(0, 5)
+# # [0, 1, 2, 3, 4]
+
+# my_range3: range = range(0, -5, -1)
+# # if we want to count downwards we have to specify -1 in step which is 1 by default
+# print(my_range3)
+# print(list(my_range3))
+# # range(0, -5, -1)
+# # [0, -1, -2, -3, -4]
+
+
+# # range objs are iterable
+
+# for i in range(3):
+#     print(i)
+
+# -------------------------------------slice()
+
+numbers: list[int] = [1, 2, 3, 4, 5]
+print(numbers[2:3])
+
+text: str = "Hello, world!"
