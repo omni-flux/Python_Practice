@@ -1292,8 +1292,39 @@ print(new_people)
 #     print(i)
 
 # -------------------------------------slice()
+# used to create a slice object that is reuseable
 
-numbers: list[int] = [1, 2, 3, 4, 5]
-print(numbers[2:3])
+# numbers: list[int] = [1, 2, 3, 4, 5]
+# print(numbers[2:3])
 
-text: str = "Hello, world!"
+# text: str = "Hello, world!"
+# text2: str = "will i get a job?"
+
+# first_three: slice = slice(0, 3)
+# reverse_slice: slice = slice(None, None, -1)
+# step_two: slice = slice(None, None, 2)
+
+# print(text[first_three])
+# print(text[reverse_slice])
+# print(text[step_two])
+
+# print(text2[first_three])
+# print(text2[reverse_slice])
+# print(text2[step_two])
+
+# -------------------------------------globals()
+# tells us every thing present in the global namespace , global scope everything that is visible their globals() returns a dir of every thing there
+
+from typing import Any
+
+text: str = "Bob"
+my_list: list[int] = [1, 2, 3]
+
+
+def func() -> None: ...
+
+
+my_globals: dict[str, Any] = dict(globals())
+
+for k, v in my_globals.items():
+    print(f"{k}:{v}")
