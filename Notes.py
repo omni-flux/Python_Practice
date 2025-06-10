@@ -1067,7 +1067,7 @@ print(new_people)
 # if __name__ == '__main__':
 #     main()
 
-# -------------------------------factorymethod??
+# -------------------------------factorymethod
 
 # from typing import Self
 # class Car:
@@ -1315,16 +1315,108 @@ print(new_people)
 # -------------------------------------globals()
 # tells us every thing present in the global namespace , global scope everything that is visible their globals() returns a dir of every thing there
 
-from typing import Any
+# from typing import Any
 
-text: str = "Bob"
-my_list: list[int] = [1, 2, 3]
-
-
-def func() -> None: ...
+# text: str = "Bob"
+# my_list: list[int] = [1, 2, 3]
 
 
-my_globals: dict[str, Any] = dict(globals())
+# def func() -> None: ...
 
-for k, v in my_globals.items():
-    print(f"{k}:{v}")
+
+# my_globals: dict[str, Any] = dict(globals())
+
+# for k, v in my_globals.items():
+#     print(f"{k}:{v}")
+
+# ----------------------------------------locals()
+# locals() similar to globals when used inside a local scope returna a dictionary of every thing defined in that local scope
+
+# but if you call locals() in the gllobal scope then the scope for locals is global scope and its out put is same as the globals output.
+
+# def add(a: int, b: int) -> None:
+#     result: int = a + b
+#     print(f"{a} + {b} = {result}")
+
+#     print("add() has:", locals())
+#     print('add() can see:', globals())
+
+# add(2, 3)
+
+# 2 + 3 = 5
+# add() has: {'a': 2, 'b': 3, 'result': 5}
+
+
+# ---------------------------------------------all()
+# all() is a helper function it takes an iterable and
+# Return True if bool(x) is True for all values x in the iterable.
+# If the iterable is empty, return True.
+#
+# wifi_enabled: bool = True
+# has_electricity: bool = True
+# has_subscription: bool = True
+#
+# #for example without all() 😔
+# if wifi_enabled and has_subscription and has_electricity:
+#     print('connected to internet')
+#
+# # but with all() 😎
+# requirements: list[bool] = [wifi_enabled,has_electricity,has_subscription]
+#
+# if all(requirements):
+#     print('connected to internet')
+#
+# peopele_voted: list[int] = [1,1,1,1,1,1,1,1,1,0]
+#
+# if not all(peopele_voted):
+#     print('Some one didnt vote ...')
+# else:
+#     print('Every one has voted!')
+
+#-----------------------------------------------any()
+# Return True if bool(x) is True for any x in the iterable.
+# If the iterable is empty,return False.
+
+# people_voted: list[int] = [0,1,0,0,0]
+#
+# if any(people_voted):
+#     print('Atleast one person voted')
+# else:
+#     print('No one voted...')
+
+#-------------------------------------------isinstance()
+# isinstance()
+# Return whether an object is an instance of a class or of a subclass thereof.
+# A tuple, as in ``isinstance(x, (A, B, ...))``, maybe given as the target to
+# check against.This is equivalent to ``isinstance(x, A) or isinstance(x, B) or ...
+# `` etc.
+
+# number: int = 10
+# pi: float = 3.14
+# text: str = 'banana'
+# my_list: list[int] = [1,2,3]
+#
+# print(isinstance(number,int)) #True
+# print(isinstance(pi,float | int)) #True
+# print(isinstance(text,str | int | dict)) #True
+#
+# class Animal:
+#     ...
+#
+# class Cat(Animal):
+#     ...
+#
+# print(isinstance(Cat(),Animal)) #True
+
+# ------- made improved chat-bot in projects/
+
+
+
+
+
+
+
+
+
+
+
