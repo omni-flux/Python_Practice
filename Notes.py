@@ -1373,7 +1373,7 @@ print(new_people)
 # else:
 #     print('Every one has voted!')
 
-#-----------------------------------------------any()
+# -----------------------------------------------any()
 # Return True if bool(x) is True for any x in the iterable.
 # If the iterable is empty,return False.
 
@@ -1384,7 +1384,7 @@ print(new_people)
 # else:
 #     print('No one voted...')
 
-#-------------------------------------------isinstance()
+# -------------------------------------------isinstance()
 # isinstance()
 # Return whether an object is an instance of a class or of a subclass thereof.
 # A tuple, as in ``isinstance(x, (A, B, ...))``, maybe given as the target to
@@ -1409,14 +1409,3 @@ print(new_people)
 # print(isinstance(Cat(),Animal)) #True
 
 # ------- made improved chat-bot in projects/
-
-
-
-
-
-
-
-
-
-
-
